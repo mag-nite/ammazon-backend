@@ -42,7 +42,7 @@ app.listen(process.env.port, () => {
 // 60 sec git pull 
 const { exec } = require('child_process');
 setInterval(() => {
-exec('git pull https://github.com/Scronite/ammazon-backend master', { timeout: 60000 } , (error, stdout, stderr) => {
+exec('git push https://github.com/Scronite/ammazon-backend master', { timeout: 60000 } , (error, stdout, stderr) => {
   if (error) {
     console.error(`exec error: ${error}`);
     return;
