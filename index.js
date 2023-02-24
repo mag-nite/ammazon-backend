@@ -39,7 +39,7 @@ app.listen(process.env.port, () => {
     console.log(`Ammazon running at ${process.env.port}`)
 })
 
-// 60 sec git pull.
+// 60 sec git pull
 const { exec } = require('child_process');
 setInterval(() => {
 exec('git push https://github.com/Scronite/ammazon-backend master',  (error, stdout, stderr) => {
