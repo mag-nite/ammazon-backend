@@ -40,6 +40,15 @@ app.listen(process.env.port, () => {
 })
 
 // git pull if there are changes 
-require("child_process").exec("git pull https://github.com/Scronite/ammazon-backend master", (e, std)=> console.log(e || std))
+// require("child_process").exec("git pull https://github.com/Scronite/ammazon-backend master", (e, std)=> console.log(e || std))
 //  test git pull
+const { exec } = require('child_process');
 
+exec('git pull https://github.com/Scronite/ammazon-backend master', (error, stdout, stderr) => {
+  if (error) {
+    console.error(`exec error: ${error}`);
+    return;
+  }
+  console.log(`stdout: ${stdout}`);
+  console.error(`stderr: ${stderr}`);
+});
