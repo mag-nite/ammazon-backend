@@ -41,5 +41,5 @@ app.listen(process.env.port, () => {
 
 // git pull if there are changes 
 require("child_process").exec("git pull", (e, std)=> console.log(e || std),3000)
-//  test git pul
+//  test git pull
 
